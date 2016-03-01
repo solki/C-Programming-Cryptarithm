@@ -32,6 +32,7 @@ int main(void) {
             if((i%10) != (j%10))
                 continue;
             
+            
             if(((i/10)%10) != ((j/1000)%10))
                 continue;
             
@@ -48,6 +49,9 @@ int main(void) {
                 continue;
             
             if(is_duplicated(cross + j))
+                continue;
+            
+            if(is_duplicated((i*100+((j/10)%100))*1000+(((cross+j)/10)%1000)))
                 continue;
             
             printf("cross = %d, roads = %d and danger = %d is a solution.\n", cross, j, cross+j);
