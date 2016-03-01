@@ -19,6 +19,7 @@ int main(void) {
     
     for(int i = 1234; i <= 9876; ++i) {
         
+        // check if "cros" is duplicated in its digits
         if(is_duplicated(i))
             continue;
         
@@ -45,12 +46,15 @@ int main(void) {
             if(((j/100)%10) != (((cross+j)/10000)%10))
                 continue;
             
+            // check if "roads" is duplicated in its digits
             if(is_duplicated(j))
                 continue;
             
+            // check if "danger" is duplicated in its digits
             if(is_duplicated(cross + j))
                 continue;
             
+            // check if "crosadnge" is duplicated in its digits
             if(is_duplicated((i*100+((j/10)%100))*1000+(((cross+j)/10)%1000)))
                 continue;
             
